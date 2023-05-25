@@ -19,28 +19,39 @@ const TrainList = ({ trains }) => {
         return shedule;
     };
     return (
-        <>
+        <section >
             {trains.length > 0 ? (
-                <ul className="list">
+                <ul className='list'>
+                    <li className="list__item">
+                        <p className='text train-number'>№ поїзда</p>
+                        <p className='text from-to'>Звідки / Куди</p>
+                        <p className='text date'>Дата</p>
+                        <div className='text time'>
+                            <p>Відправлення / Прибуття</p>
+                            <p></p>
+                        </div>
+                    </li>
                     {trains.map((e) => {
                         return (
                             <li key={e.id} className="list__item">
-                                <p>{e.train}</p>
-                                <p>
-                                    Відправлення: {e.Departure} об {e.departedAt}
-                                </p>
-                                <p>
-                                    Прибуття: {e.Arrival} об {e.arrivalAt}
-                                </p>
-                                <p>Розклад по днях місяця: {dayValue(e.day)}</p>
+                                <p className='text train-number'>{e.train}</p>
+                                <div className='text from-to '>
+                                    <p>{e.Departure} / {e.Arrival}</p>
+                                    <p></p>
+                                </div>
+                                <p className='text date'>{dayValue(e.day)}</p>
+                                <div className='text time'>
+                                    <p>{e.departedAt}</p>
+                                    <p>{e.departedAt}</p>
+                                </div>
                             </li>
                         );
                     })}
                 </ul>
             ) : (
-                <p>Оберіть потяг qwe</p>
+                <p className='not-found'>Упсс...  потягів за даним напрямком не знайдено</p>
             )}
-        </>
+        </section>
     );
 };
 export default TrainList;

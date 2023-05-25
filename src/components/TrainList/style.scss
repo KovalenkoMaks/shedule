@@ -1,8 +1,26 @@
 .list{
+    max-width: 900px;
+    margin: 0 auto;
     &__item{
         display: flex;
-        justify-content: center;
-        gap: 10px;
-        margin-top: 20px;
+        justify-content: space-between;
+        margin-bottom: 20px;
     }
+}
+.text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: 1px solid grey;
+    padding: 5px;
+    width: 200px;
+    
+}
+.time{
+        flex-direction: column;
+        gap: 10px;
+}
+.not-found{
+    text-align: center;
+    font-size: large;
 }
