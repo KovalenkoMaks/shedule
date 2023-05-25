@@ -43,34 +43,36 @@ function Form({ baseValue, setTrains }) {
         setArrivalValue(temp);
     };
     return (
-        <form className="form" onSubmit={onSubmit}>
-            <BasicSelect
-                className="form__lable"
-                value={departureValue}
-                baseValue={departureData}
-                text={'Відправлення'}
-                onChange={onChange}
-            />
-            <button className="form__btn" type="button" onClick={onClick}>
-                ↔️
-            </button>
-            <BasicSelect
-                className="form__lable"
-                value={arrivalValue}
-                baseValue={arrivalData}
-                text={'Прибуття'}
-                onChange={onChange}
-            />
-            <LocalizationProvider dateAdapter={AdapterDayjs}>
-                <DatePicker
+        <section>
+            <form className="form" onSubmit={onSubmit}>
+                <BasicSelect
                     className="form__lable"
-                    format="DD.MM.YYYY"
-                    label="Оберіть дату"
-                    onChange={onDateChange}
+                    value={departureValue}
+                    baseValue={departureData}
+                    text={'Відправлення'}
+                    onChange={onChange}
                 />
-            </LocalizationProvider>
-            <button type="submit">Пошук</button>
-        </form>
+                <button className="form__btn" type="button" onClick={onClick}>
+                    ↔️
+                </button>
+                <BasicSelect
+                    className="form__lable"
+                    value={arrivalValue}
+                    baseValue={arrivalData}
+                    text={'Прибуття'}
+                    onChange={onChange}
+                />
+                <LocalizationProvider dateAdapter={AdapterDayjs}>
+                    <DatePicker
+                        className="form__lable"
+                        format="DD.MM.YYYY"
+                        label="Оберіть дату"
+                        onChange={onDateChange}
+                    />
+                </LocalizationProvider>
+                <button className="form__btn" type="submit">Пошук</button>
+            </form>
+        </section>
     );
 }
 export default Form;

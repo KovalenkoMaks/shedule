@@ -28,18 +28,17 @@ const TrainList = ({ trains }) => {
                         <p className='text date'>Дата</p>
                         <div className='text time'>
                             <p>Відправлення / Прибуття</p>
-                            <p></p>
                         </div>
                     </li>
                     {trains.map((e) => {
                         return (
                             <li key={e.id} className="list__item">
-                                <p className='text train-number'>{e.train}</p>
-                                <div className='text from-to '>
+                                <p className='text'>{e.train}</p>
+                                <div className='text'>
                                     <p>{e.Departure} / {e.Arrival}</p>
                                     <p></p>
                                 </div>
-                                <p className='text date'>{dayValue(e.day)}</p>
+                                <p className='text'>{dayValue(e.day)}</p>
                                 <div className='text time'>
                                     <p>{e.departedAt}</p>
                                     <p>{e.departedAt}</p>
