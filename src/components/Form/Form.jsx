@@ -7,7 +7,7 @@ import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import dayjs from 'dayjs';
 
 function Form({ baseValue, setTrains }) {
-    const { departureData, arrivalData, setArrivalData, setDepartureData } = baseValue;
+    const { departureData, arrivalData } = baseValue;
     const [departureValue, setDepartureValue] = useState('');
     const [arrivalValue, setArrivalValue] = useState('');
     const [day, setDay] = useState('');
