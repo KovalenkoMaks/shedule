@@ -1,0 +1,28 @@
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    &__btn{
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.02em;
+  width: 50px;
+  height: 44px;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 16px;
+  border: none;
+  background-color: rgb(144, 169, 244);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+
+    &:hover {
+   transform: scale(1.1);
+  }
+    }
+    &__item{
+        border-radius: 30px;
+    }
+}
